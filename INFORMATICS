@@ -1,8 +1,8 @@
                    I.C.O TOKEN SALE PROGRESS TREE
                  Version 1.0, CODE_NAME: denial_token
 
-BASIC WORK FLOW:
-=================
+ERC-20 TOKEN CONTRACT WORK FLOW
+================================
 * Project folder created
 * 'truffle init' command run
 * started ganache local block chain
@@ -14,3 +14,13 @@ BASIC WORK FLOW:
 * written tests for contract 
 * written transfer function and tested
 * Complete ERC-20 token and tested
+
+CROWD SALE CONTRACT WORK FLOW
+==============================
+           - allocate tokens to tokensale contract
+           - set token price in WEI
+           - assign an admin
+           - buy tokens
+           - end sale
+
+
