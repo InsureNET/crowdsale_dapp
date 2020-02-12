@@ -7,4 +7,8 @@ BASIC WORK FLOW:
 * 'truffle init' command run
 * started ganache local block chain
 * Inform truffle to use the ganache blockchain 
-*
+* Coded minimum contract
+* created new migration file to deploy contract
+* contract deployed
+* using truffle console intracted with contract
+* written tests for contract 
