@@ -13,3 +13,4 @@ BASIC WORK FLOW:
 * using truffle console intracted with contract
 * written tests for contract 
 * written transfer function and tested
+* Complete ERC-20 token and tested
