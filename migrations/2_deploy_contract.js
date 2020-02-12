@@ -1,5 +1,5 @@
 const TrayToken = artifacts.require("TrayToken");
 
 module.exports = function(deployer) {
-  deployer.deploy(TrayToken);
+  deployer.deploy(TrayToken, 1000);
 };
