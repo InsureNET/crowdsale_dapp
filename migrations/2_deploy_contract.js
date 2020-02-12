@@ -3,5 +3,5 @@ const CrowdSale = artifacts.require("CrowdSale");
 
 module.exports = function(deployer) {
   deployer.deploy(TrayToken, 1000);
-  deployer.deploy(CrowdSale);
+  deployer.deploy(CrowdSale, TrayToken.address);
 };

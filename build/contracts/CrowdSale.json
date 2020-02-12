@@ -1,0 +1,197 @@
+{
+  "contractName": "CrowdSale",
+  "abi": [
+    {
+      "inputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/home/corn/Code/dapp/token_saleICO/contracts/CrowdSale.sol\":\"CrowdSale\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/corn/Code/dapp/token_saleICO/contracts/CrowdSale.sol\":{\"keccak256\":\"0x77befbc6e272cd6f8b6bd4bfe3f621a2c7816544a60576ba00854b97d0a3a773\",\"urls\":[\"bzz-raw://1619851604c2838a259685c80b0e6da55cba25c84d97eba1bf6bc6e83ef56d66\",\"dweb:/ipfs/QmXUUqRZJ9AArY3Uuw28aYJksAT9fHzYE34roQmrbRtv5n\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603e80601d6000396000f3fe6080604052600080fdfea265627a7a723158200f1506ff07a9719f323235f4592abab2c60c81fd18830861dcd67e286b6f59b964736f6c63430005100032",
+  "deployedBytecode": "0x6080604052600080fdfea265627a7a723158200f1506ff07a9719f323235f4592abab2c60c81fd18830861dcd67e286b6f59b964736f6c63430005100032",
+  "sourceMap": "35:51:0:-;;;58:26;8:9:-1;5:2;;;30:1;27;20:12;5:2;58:26:0;35:51;;;;;;",
+  "deployedSourceMap": "35:51:0:-;;;;;",
+  "source": "pragma solidity >= 0.5.0 < 0.7.0;\n\ncontract CrowdSale {\n  constructor() public {\n  }\n}\n",
+  "sourcePath": "/home/corn/Code/dapp/token_saleICO/contracts/CrowdSale.sol",
+  "ast": {
+    "absolutePath": "/home/corn/Code/dapp/token_saleICO/contracts/CrowdSale.sol",
+    "exportedSymbols": {
+      "CrowdSale": [
+        6
+      ]
+    },
+    "id": 7,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.5",
+          ".0",
+          "<",
+          "0.7",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:33:0"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 6,
+        "linearizedBaseContracts": [
+          6
+        ],
+        "name": "CrowdSale",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 4,
+              "nodeType": "Block",
+              "src": "79:5:0",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 5,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "69:2:0"
+            },
+            "returnParameters": {
+              "id": 3,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "79:0:0"
+            },
+            "scope": 6,
+            "src": "58:26:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 7,
+        "src": "35:51:0"
+      }
+    ],
+    "src": "0:87:0"
+  },
+  "legacyAST": {
+    "absolutePath": "/home/corn/Code/dapp/token_saleICO/contracts/CrowdSale.sol",
+    "exportedSymbols": {
+      "CrowdSale": [
+        6
+      ]
+    },
+    "id": 7,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.5",
+          ".0",
+          "<",
+          "0.7",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:33:0"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 6,
+        "linearizedBaseContracts": [
+          6
+        ],
+        "name": "CrowdSale",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 4,
+              "nodeType": "Block",
+              "src": "79:5:0",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 5,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "69:2:0"
+            },
+            "returnParameters": {
+              "id": 3,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "79:0:0"
+            },
+            "scope": 6,
+            "src": "58:26:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 7,
+        "src": "35:51:0"
+      }
+    ],
+    "src": "0:87:0"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {
+    "1581513368014": {
+      "events": {},
+      "links": {},
+      "address": "0x0A3f719406119A809315883487475343F91D9957",
+      "transactionHash": "0xae58a9a6a9dc7aeac39ce283bc62076e3da77d7865266bba7d7683cba1515217"
+    },
+    "1581533354166": {
+      "events": {},
+      "links": {},
+      "address": "0x34FbC735760f1236138F13D0087A07aD3c42158A",
+      "transactionHash": "0xd5c4688a4d79437594e828f62d8040445f44fc10d5af04cb585585b260852134"
+    }
+  },
+  "schemaVersion": "3.0.23",
+  "updatedAt": "2020-02-12T18:52:27.796Z",
+  "networkType": "ethereum",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
