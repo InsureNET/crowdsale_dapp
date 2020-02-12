@@ -2,7 +2,6 @@ const TrayToken = artifacts.require("TrayToken");
 
 
 contract("TrayToken", function(accounts) {
-  var token;
 
   it("should initialize contract with correct values", async function() {
     return TrayToken.deployed().then(function(instance) {
@@ -79,6 +78,32 @@ contract("TrayToken", function(accounts) {
       return token.allowance(accounts[0], accounts[1]);
     }).then(function(allowance_value) {
       assert.equal(allowance_value, 100, 'Approval confirmation check');
+    });
+  })
+
+
+  it("TransferFrom function check", async function() {
+    return TrayToken.deployed().then(function(instance) {
+      token = instance;
+      from_A = accounts[2];     // A who approves B to transfer her token
+      spender_B = accounts[3];  // B who transfer token from A to anybody
+      to_C = accounts[4];       // C who receives token
+      // Transfer some tokens
+      return token.transfer(from_A, 300, { from: accounts[0] });
+    }).then(function(receipt) {
+      // Approving B to transfer max of 200 tokens on A's behalf
+      return token.approve(spender_B, 200, { from: from_A });
+    }).then(function(receipt) {
+      // Trying to transfer larger token than A's having
+      return token.transferFrom(from_A, to_C, 400, { from: spender_B } );
+    }).then(assert.fail).catch(function(error_status) {
+      // Testing CHECK	    
+      assert(error_status.message.indexOf('revert') >= 0, 'Cannot transfer larger value of token than from A');
+      // Trying to transfer larger value than approved amount of token
+      return token.transferFrom(from_A, to_C, 201, { from: spender_B });
+    }).then(assert.fail).catch(function(error_status) {
+      // Testing require	    
+      assert(error_status.message.indexOf('revert') >=0, 'Cannot transfer larger than approved amount for B');
     });
   });
 

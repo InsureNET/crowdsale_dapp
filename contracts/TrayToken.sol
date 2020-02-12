@@ -57,10 +57,16 @@ contract TrayToken {
   
   // This function is called if sender dont initiate the transfer to transfer token to recepient	
   function transferFrom(address _from, address _to, uint256 _value) public returns(bool success) {
+    // Condition check
     require(balanceOf[_from] >= _value);
+    require(allowance[_from][msg.sender] >= _value);
 
+    // Incrementing and decrementing value
     balanceOf[_from] -= _value;
     balanceOf[_to] += _value;
+
+    // Update allowance
+    allowance[_from][msg.sender] -= _value;
 
     emit Transfer(_from, _to, _value);
 
