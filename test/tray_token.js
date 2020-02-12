@@ -59,7 +59,28 @@ contract("TrayToken", function(accounts) {
     }).then(function(balance) { 
       assert.equal(balance, 500, 'Token deducted from the sender');
     });
-  }); 
+  })
+
+
+  it("approval function check", async function() {
+    return TrayToken.deployed().then(function(instance) {
+      token = instance;
+      return token.approve.call(accounts[1], 200);
+    }).then(function(return_value) {
+      assert.equal(return_value, true, 'Return value from approve function check');
+      return token.approve(accounts[1], 100);
+    }).then(function(receipt) {
+      // Testing Approval Event
+      assert.equal(receipt.logs.length, 1, 'One event triggered');
+      assert.equal(receipt.logs[0].event, 'Approval', 'Confirmed the event is Approval');
+      assert.equal(receipt.logs[0].args._owner, accounts[0], 'Owner account check');
+      assert.equal(receipt.logs[0].args._spender, accounts[1], 'Spender account check');
+      assert.equal(receipt.logs[0].args._value, 100, 'Amount to transfer check');
+      return token.allowance(accounts[0], accounts[1]);
+    }).then(function(allowance_value) {
+      assert.equal(allowance_value, 100, 'Approval confirmation check');
+    });
+  });
 
 
 })
