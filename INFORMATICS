@@ -1,0 +1,10 @@
+                   I.C.O TOKEN SALE PROGRESS TREE
+                 Version 1.0, CODE_NAME: denial_token
+
+BASIC WORK FLOW:
+=================
+* Project folder created
+* 'truffle init' command run
+* started ganache local block chain
+* Inform truffle to use the ganache blockchain 
+*
