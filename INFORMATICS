@@ -12,3 +12,4 @@ BASIC WORK FLOW:
 * contract deployed
 * using truffle console intracted with contract
 * written tests for contract 
+* written transfer function and tested
