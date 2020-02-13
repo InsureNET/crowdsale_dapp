@@ -1,7 +1,9 @@
+const TrayToken = artifacts.require("TrayToken");
 const CrowdSale = artifacts.require("CrowdSale");
 
 contract("CrowdSale", function(accounts) {
   var token_price = 1000000000000000;     // 0.001 Ether, value give in WEI
+  var token;
 
   it("Initialization Check", async function() {
     return CrowdSale.deployed().then(function(instance) {
@@ -44,7 +46,9 @@ contract("CrowdSale", function(accounts) {
       return crowdsale.buyToken(20, { from: accounts[3], value: 100 });
     }).then(assert.fail).catch(function(error) {
       assert(error.message.indexOf('revert') >= 0, 'Amount sent must be higher');
-    });
-  });
+    })
+  })
+
+
 
 });
