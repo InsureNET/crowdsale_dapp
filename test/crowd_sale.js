@@ -48,7 +48,4 @@ contract("CrowdSale", function(accounts) {
       assert(error.message.indexOf('revert') >= 0, 'Amount sent must be higher');
     })
   })
-
-
-
 });

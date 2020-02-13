@@ -47,11 +47,15 @@ contract CrowdSale {
 
   function endSale() public {
     // Require admin 
-
+    require(msg.sender == admin);
+    
     // Transfer remaining tokens from contract to admin wallet
-
+    require(tokenContract.transfer(admin, tokenContract.balanceOf(address(this) ) ) );
+    
     // Destroy CrowdSale contract
-
+    // Conversion of 'address' type to 'payable address' type
+    // convertion of address to uint160 and back to address make it 'payable address' type
+    selfdestruct(address(uint160(admin)));
   }	  
   
 }
