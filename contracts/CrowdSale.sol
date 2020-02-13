@@ -26,6 +26,7 @@ contract CrowdSale {
     tokenPrice = _tokenPrice;
   }
 
+
   function buyToken(uint256 _numberOfTokens) public payable {
     // Check sent amount/value can able to buy given number of tokens
     require(msg.value == _numberOfTokens.mul(tokenPrice));
@@ -41,6 +42,5 @@ contract CrowdSale {
 
     // Emit event since transfer is taking place
     emit Sell(msg.sender, _numberOfTokens);
-
   }
 }

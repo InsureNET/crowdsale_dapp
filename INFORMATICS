@@ -27,4 +27,8 @@ CROWD SALE CONTRACT WORK FLOW
 * updated the migration
 * admin assigned
 * setup token contract and token price as well as tested
+* TokenContract inported to Crowdsale contract
+* External library added for sake math
+* buyToken function setup done
+* setting up endSale function
 
