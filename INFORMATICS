@@ -31,4 +31,8 @@ CROWD SALE CONTRACT WORK FLOW
 * External library added for sake math
 * buyToken function setup done
 * setting up endSale function
+* two require and selfdestruct for endSale done
 
+
+FRONT END
+=========
