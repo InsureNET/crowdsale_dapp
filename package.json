@@ -1,0 +1,16 @@
+{
+	"name": "crowdsale-dapp",
+	"description": "Tokensale contract dapp",
+	"version": "0.0.1",
+	"main": "truffle-config.js",
+	"directories": {
+		"test": "test"
+	},
+
+	"devDependencies": {
+		"lite-server": "*"
+	},
+
+	"author": "T-rays"
+}
+
