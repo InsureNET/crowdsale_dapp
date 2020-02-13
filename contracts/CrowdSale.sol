@@ -26,6 +26,7 @@ contract CrowdSale {
 
   function buyToken(uint256 _numberOfTokens) public payable {
     // Check sent amount/value can able to buy given number of tokens
+    require(msg.value == _numberOfTokens)
     // Check contract has enough tokens
     // Check transfer of amount/value is successful
 
