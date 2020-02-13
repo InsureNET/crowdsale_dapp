@@ -9,5 +9,9 @@
 	"devDependencies": {
 		"lite-server": "*"
 	},
-	"author": "T-rays"
+	"author": "T-rays",
+
+	"scripts": {
+		"dev": "lite-server"
+	}
 }
