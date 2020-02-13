@@ -27,6 +27,7 @@ contract("CrowdSale", function(accounts) {
       crowdsale = instance;
       var no_of_tokens = 10;
       var amount = token_price * no_of_tokens;
+      var one_wei = 1;
       // Buying token
       return crowdsale.buyToken(no_of_tokens, { from: accounts[3], value: amount });
     }).then(function(receipt) {
@@ -39,6 +40,10 @@ contract("CrowdSale", function(accounts) {
     }).then(function(total_token_sold) {
       // Testing bought no of tokens is updated correctly
       assert.equal(total_token_sold, 10, 'sold tokens value incremented check');
+      // Trying to buy more tokens then supplied amount
+      return crowdsale.buyToken(20, { from: accounts[3], value: 100 });
+    }).then(assert.fail).catch(function(error) {
+      assert(error.message.indexOf('revert') >= 0, 'Amount sent must be higher');
     });
   });
 

@@ -1,9 +1,11 @@
 pragma solidity >= 0.5.0 < 0.7.0;
 
 import "./TrayToken.sol";
-
+import "../installed_contracts/zeppelin/contracts/math/SafeMath.sol";
 
 contract CrowdSale {
+
+  using SafeMath for uint256;
 
   // State variable list
   address admin;
@@ -26,7 +28,7 @@ contract CrowdSale {
 
   function buyToken(uint256 _numberOfTokens) public payable {
     // Check sent amount/value can able to buy given number of tokens
-    require(msg.value == _numberOfTokens)
+    require(msg.value == _numberOfTokens.mul(tokenPrice));
     // Check contract has enough tokens
     // Check transfer of amount/value is successful
 
