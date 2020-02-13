@@ -9,12 +9,15 @@ contract CrowdSale {
   address admin;
   // variable to hold address of Token contract
   TrayToken public tokenContract;
+  // Price of token in wei
+  uint256 public tokenPrice; 
 
 
-  constructor(TrayToken _tokenContract) public {
+  constructor(TrayToken _tokenContract, uint256 _tokenPrice) public {
     // Address which deploy this contract will become admin	  
     admin = msg.sender;
     tokenContract = _tokenContract;
+    tokenPrice = _tokenPrice;
   }
 
 
