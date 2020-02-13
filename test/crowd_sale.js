@@ -19,4 +19,22 @@ contract("CrowdSale", function(accounts) {
       assert.equal(price, token_price, 'Token price set correctly check');
     })
   });
+
+
+  it("buyToken function Check", async function() {
+    return CrowdSale.deployed().then(function(instance) {
+      // Setup parameter	    
+      crowdsale = instance;
+      var no_of_tokens = 10;
+      var amount = token_price * no_of_tokens;
+      // Buying token
+      return crowdsale.buyToken(no_of_tokens, { from: accounts[3], value: amount });
+    }).then(function(receipt) {
+      return crowdsale.tokenSold();
+    }).then(function(total_token_sold) {
+      // Testing bought no of tokens is updated correctly
+      assert.equal(total_token_sold, 10, 'sold tokens value incremented check');
+    });
+  });
+
 });
