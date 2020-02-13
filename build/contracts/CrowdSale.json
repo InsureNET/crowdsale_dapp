@@ -2,27 +2,48 @@
   "contractName": "CrowdSale",
   "abi": [
     {
-      "inputs": [],
+      "inputs": [
+        {
+          "internalType": "contract TrayToken",
+          "name": "_tokenContract",
+          "type": "address"
+        }
+      ],
       "payable": false,
       "stateMutability": "nonpayable",
       "type": "constructor"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "tokenContract",
+      "outputs": [
+        {
+          "internalType": "contract TrayToken",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/home/corn/Code/dapp/token_saleICO/contracts/CrowdSale.sol\":\"CrowdSale\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/corn/Code/dapp/token_saleICO/contracts/CrowdSale.sol\":{\"keccak256\":\"0x77befbc6e272cd6f8b6bd4bfe3f621a2c7816544a60576ba00854b97d0a3a773\",\"urls\":[\"bzz-raw://1619851604c2838a259685c80b0e6da55cba25c84d97eba1bf6bc6e83ef56d66\",\"dweb:/ipfs/QmXUUqRZJ9AArY3Uuw28aYJksAT9fHzYE34roQmrbRtv5n\"]}},\"version\":1}",
-  "bytecode": "0x6080604052348015600f57600080fd5b50603e80601d6000396000f3fe6080604052600080fdfea265627a7a723158200f1506ff07a9719f323235f4592abab2c60c81fd18830861dcd67e286b6f59b964736f6c63430005100032",
-  "deployedBytecode": "0x6080604052600080fdfea265627a7a723158200f1506ff07a9719f323235f4592abab2c60c81fd18830861dcd67e286b6f59b964736f6c63430005100032",
-  "sourceMap": "35:51:0:-;;;58:26;8:9:-1;5:2;;;30:1;27;20:12;5:2;58:26:0;35:51;;;;;;",
-  "deployedSourceMap": "35:51:0:-;;;;;",
-  "source": "pragma solidity >= 0.5.0 < 0.7.0;\n\ncontract CrowdSale {\n  constructor() public {\n  }\n}\n",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"contract TrayToken\",\"name\":\"_tokenContract\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"constant\":true,\"inputs\":[],\"name\":\"tokenContract\",\"outputs\":[{\"internalType\":\"contract TrayToken\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/home/corn/Code/dapp/token_saleICO/contracts/CrowdSale.sol\":\"CrowdSale\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/corn/Code/dapp/token_saleICO/contracts/CrowdSale.sol\":{\"keccak256\":\"0xfae999fec1a85edb50a50575217e72732828db2773de1a9d7889f648faee9733\",\"urls\":[\"bzz-raw://ca5146953ea9af032b031c720f7ab14e7278200917185a4871d47f114c0d8b64\",\"dweb:/ipfs/Qmf3UbJKDkckcpCSXpNkBdVcocoGK1RvBPM4YPs7qFpUJU\"]},\"/home/corn/Code/dapp/token_saleICO/contracts/TrayToken.sol\":{\"keccak256\":\"0x251d1d139cbc3b0cbc37bda21fb8ca3996a5b8089957a59446b190a317c6dd4e\",\"urls\":[\"bzz-raw://7a3445df068755759af717dc7c6e7e13503ed632a6aa26d6c13531cd810cfe2e\",\"dweb:/ipfs/QmVEudE5wHXkdQwbBpdutvVa3NBNJegaD7pTQe6wPi4g49\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b506040516101a43803806101a48339818101604052602081101561003357600080fd5b8101908080519060200190929190505050336000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555080600160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055505060d0806100d46000396000f3fe6080604052348015600f57600080fd5b506004361060285760003560e01c806355a373d614602d575b600080fd5b60336075565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff168156fea265627a7a72315820a6e60c14392a31c26e78962c8836dbe5c58883f50adf2e680a600a4df9e2971e64736f6c63430005100032",
+  "deployedBytecode": "0x6080604052348015600f57600080fd5b506004361060285760003560e01c806355a373d614602d575b600080fd5b60336075565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff168156fea265627a7a72315820a6e60c14392a31c26e78962c8836dbe5c58883f50adf2e680a600a4df9e2971e64736f6c63430005100032",
+  "sourceMap": "63:327:0:-;;;213:173;8:9:-1;5:2;;;30:1;27;20:12;5:2;213:173:0;;;;;;;;;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;213:173:0;;;;;;;;;;;;;;;;335:10;327:5;;:18;;;;;;;;;;;;;;;;;;367:14;351:13;;:30;;;;;;;;;;;;;;;;;;213:173;63:327;;;;;;",
+  "deployedSourceMap": "63:327:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;63:327:0;;;;;;;;;;;;;;;;;;;177:30;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o",
+  "source": "pragma solidity >= 0.5.0 < 0.7.0;\n\nimport \"./TrayToken.sol\";\n\n\ncontract CrowdSale {\n\n  // State variable list\n  address admin;\n  // variable to hold address of Token contract\n  TrayToken public tokenContract;\n\n\n  constructor(TrayToken _tokenContract) public {\n    // Address which deploy this contract will become admin\t  \n    admin = msg.sender;\n    tokenContract = _tokenContract;\n  }\n\n\n}\n",
   "sourcePath": "/home/corn/Code/dapp/token_saleICO/contracts/CrowdSale.sol",
   "ast": {
     "absolutePath": "/home/corn/Code/dapp/token_saleICO/contracts/CrowdSale.sol",
     "exportedSymbols": {
       "CrowdSale": [
-        6
+        22
       ]
     },
-    "id": 7,
+    "id": 23,
     "nodeType": "SourceUnit",
     "nodes": [
       {
@@ -40,65 +61,269 @@
         "src": "0:33:0"
       },
       {
+        "absolutePath": "/home/corn/Code/dapp/token_saleICO/contracts/TrayToken.sol",
+        "file": "./TrayToken.sol",
+        "id": 2,
+        "nodeType": "ImportDirective",
+        "scope": 23,
+        "sourceUnit": 243,
+        "src": "35:25:0",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
         "baseContracts": [],
         "contractDependencies": [],
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 6,
+        "id": 22,
         "linearizedBaseContracts": [
-          6
+          22
         ],
         "name": "CrowdSale",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
+            "constant": false,
+            "id": 4,
+            "name": "admin",
+            "nodeType": "VariableDeclaration",
+            "scope": 22,
+            "src": "112:13:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 3,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "112:7:0",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 6,
+            "name": "tokenContract",
+            "nodeType": "VariableDeclaration",
+            "scope": 22,
+            "src": "177:30:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_TrayToken_$242",
+              "typeString": "contract TrayToken"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 5,
+              "name": "TrayToken",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 242,
+              "src": "177:9:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_TrayToken_$242",
+                "typeString": "contract TrayToken"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
             "body": {
-              "id": 4,
+              "id": 20,
               "nodeType": "Block",
-              "src": "79:5:0",
-              "statements": []
+              "src": "258:128:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 14,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 11,
+                      "name": "admin",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 4,
+                      "src": "327:5:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 12,
+                        "name": "msg",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 257,
+                        "src": "335:3:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_message",
+                          "typeString": "msg"
+                        }
+                      },
+                      "id": 13,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "sender",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "335:10:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address_payable",
+                        "typeString": "address payable"
+                      }
+                    },
+                    "src": "327:18:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 15,
+                  "nodeType": "ExpressionStatement",
+                  "src": "327:18:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 18,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 16,
+                      "name": "tokenContract",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 6,
+                      "src": "351:13:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_TrayToken_$242",
+                        "typeString": "contract TrayToken"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 17,
+                      "name": "_tokenContract",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 8,
+                      "src": "367:14:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_TrayToken_$242",
+                        "typeString": "contract TrayToken"
+                      }
+                    },
+                    "src": "351:30:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_TrayToken_$242",
+                      "typeString": "contract TrayToken"
+                    }
+                  },
+                  "id": 19,
+                  "nodeType": "ExpressionStatement",
+                  "src": "351:30:0"
+                }
+              ]
             },
             "documentation": null,
-            "id": 5,
+            "id": 21,
             "implemented": true,
             "kind": "constructor",
             "modifiers": [],
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2,
+              "id": 9,
               "nodeType": "ParameterList",
-              "parameters": [],
-              "src": "69:2:0"
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 8,
+                  "name": "_tokenContract",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 21,
+                  "src": "225:24:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_TrayToken_$242",
+                    "typeString": "contract TrayToken"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 7,
+                    "name": "TrayToken",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 242,
+                    "src": "225:9:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_TrayToken_$242",
+                      "typeString": "contract TrayToken"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "224:26:0"
             },
             "returnParameters": {
-              "id": 3,
+              "id": 10,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "79:0:0"
+              "src": "258:0:0"
             },
-            "scope": 6,
-            "src": "58:26:0",
+            "scope": 22,
+            "src": "213:173:0",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 7,
-        "src": "35:51:0"
+        "scope": 23,
+        "src": "63:327:0"
       }
     ],
-    "src": "0:87:0"
+    "src": "0:391:0"
   },
   "legacyAST": {
     "absolutePath": "/home/corn/Code/dapp/token_saleICO/contracts/CrowdSale.sol",
     "exportedSymbols": {
       "CrowdSale": [
-        6
+        22
       ]
     },
-    "id": 7,
+    "id": 23,
     "nodeType": "SourceUnit",
     "nodes": [
       {
@@ -116,56 +341,260 @@
         "src": "0:33:0"
       },
       {
+        "absolutePath": "/home/corn/Code/dapp/token_saleICO/contracts/TrayToken.sol",
+        "file": "./TrayToken.sol",
+        "id": 2,
+        "nodeType": "ImportDirective",
+        "scope": 23,
+        "sourceUnit": 243,
+        "src": "35:25:0",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
         "baseContracts": [],
         "contractDependencies": [],
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 6,
+        "id": 22,
         "linearizedBaseContracts": [
-          6
+          22
         ],
         "name": "CrowdSale",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
+            "constant": false,
+            "id": 4,
+            "name": "admin",
+            "nodeType": "VariableDeclaration",
+            "scope": 22,
+            "src": "112:13:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 3,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "112:7:0",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 6,
+            "name": "tokenContract",
+            "nodeType": "VariableDeclaration",
+            "scope": 22,
+            "src": "177:30:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_TrayToken_$242",
+              "typeString": "contract TrayToken"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 5,
+              "name": "TrayToken",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 242,
+              "src": "177:9:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_TrayToken_$242",
+                "typeString": "contract TrayToken"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
             "body": {
-              "id": 4,
+              "id": 20,
               "nodeType": "Block",
-              "src": "79:5:0",
-              "statements": []
+              "src": "258:128:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 14,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 11,
+                      "name": "admin",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 4,
+                      "src": "327:5:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 12,
+                        "name": "msg",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 257,
+                        "src": "335:3:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_message",
+                          "typeString": "msg"
+                        }
+                      },
+                      "id": 13,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "sender",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "335:10:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address_payable",
+                        "typeString": "address payable"
+                      }
+                    },
+                    "src": "327:18:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 15,
+                  "nodeType": "ExpressionStatement",
+                  "src": "327:18:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 18,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 16,
+                      "name": "tokenContract",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 6,
+                      "src": "351:13:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_TrayToken_$242",
+                        "typeString": "contract TrayToken"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 17,
+                      "name": "_tokenContract",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 8,
+                      "src": "367:14:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_TrayToken_$242",
+                        "typeString": "contract TrayToken"
+                      }
+                    },
+                    "src": "351:30:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_TrayToken_$242",
+                      "typeString": "contract TrayToken"
+                    }
+                  },
+                  "id": 19,
+                  "nodeType": "ExpressionStatement",
+                  "src": "351:30:0"
+                }
+              ]
             },
             "documentation": null,
-            "id": 5,
+            "id": 21,
             "implemented": true,
             "kind": "constructor",
             "modifiers": [],
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2,
+              "id": 9,
               "nodeType": "ParameterList",
-              "parameters": [],
-              "src": "69:2:0"
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 8,
+                  "name": "_tokenContract",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 21,
+                  "src": "225:24:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_TrayToken_$242",
+                    "typeString": "contract TrayToken"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 7,
+                    "name": "TrayToken",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 242,
+                    "src": "225:9:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_TrayToken_$242",
+                      "typeString": "contract TrayToken"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "224:26:0"
             },
             "returnParameters": {
-              "id": 3,
+              "id": 10,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "79:0:0"
+              "src": "258:0:0"
             },
-            "scope": 6,
-            "src": "58:26:0",
+            "scope": 22,
+            "src": "213:173:0",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 7,
-        "src": "35:51:0"
+        "scope": 23,
+        "src": "63:327:0"
       }
     ],
-    "src": "0:87:0"
+    "src": "0:391:0"
   },
   "compiler": {
     "name": "solc",
@@ -183,10 +612,16 @@
       "links": {},
       "address": "0x34FbC735760f1236138F13D0087A07aD3c42158A",
       "transactionHash": "0xd5c4688a4d79437594e828f62d8040445f44fc10d5af04cb585585b260852134"
+    },
+    "1581553488643": {
+      "events": {},
+      "links": {},
+      "address": "0xdcF7e03cf23AE50aDBE1C0b88FcE5e58532A4a1E",
+      "transactionHash": "0x3663e9e11b5d5dc61728974f19ee20476de06113a651ad8a18386737479fd054"
     }
   },
   "schemaVersion": "3.0.23",
-  "updatedAt": "2020-02-12T18:52:27.796Z",
+  "updatedAt": "2020-02-13T00:30:13.773Z",
   "networkType": "ethereum",
   "devdoc": {
     "methods": {}
