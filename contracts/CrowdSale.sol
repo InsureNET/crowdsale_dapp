@@ -14,6 +14,8 @@ contract CrowdSale {
   // Total tokens sold
   uint256 public tokenSold; 
 
+  event Sell(address indexed _buyer, uint256 _amount);
+
 
   constructor(TrayToken _tokenContract, uint256 _tokenPrice) public {
     // Address which deploy this contract will become admin	  
@@ -30,6 +32,7 @@ contract CrowdSale {
     // Update total no of tokens sold
     tokenSold += _numberOfTokens;
     // Emit event since transfer is taking place
+    emit Sell(msg.sender, _numberOfTokens);
 
   }
 }

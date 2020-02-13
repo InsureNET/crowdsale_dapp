@@ -30,6 +30,11 @@ contract("CrowdSale", function(accounts) {
       // Buying token
       return crowdsale.buyToken(no_of_tokens, { from: accounts[3], value: amount });
     }).then(function(receipt) {
+      // Testing Sell event
+      assert.equal(receipt.logs.length, 1, 'Triggered one event');
+      assert.equal(receipt.logs[0].event, 'Sell', 'Triggered event with name Sell');
+      assert.equal(receipt.logs[0].args._buyer, accounts[3], 'Logs account which bought token');
+      assert.equal(receipt.logs[0].args._amount, 10, 'Logs amount of token bought');
       return crowdsale.tokenSold();
     }).then(function(total_token_sold) {
       // Testing bought no of tokens is updated correctly
