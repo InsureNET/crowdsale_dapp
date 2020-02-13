@@ -43,4 +43,15 @@ contract CrowdSale {
     // Emit event since transfer is taking place
     emit Sell(msg.sender, _numberOfTokens);
   }
+
+
+  function endSale() public {
+    // Require admin 
+
+    // Transfer remaining tokens from contract to admin wallet
+
+    // Destroy CrowdSale contract
+
+  }	  
+  
 }
