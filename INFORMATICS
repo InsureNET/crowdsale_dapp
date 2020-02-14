@@ -36,3 +36,5 @@ CROWD SALE CONTRACT WORK FLOW
 
 FRONT END
 =========
+* installed lite-server package
+* modified package.json to add lite-server to scripts
