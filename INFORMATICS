@@ -41,6 +41,7 @@ FRONT END
 * added bs-config.json file for lite-server
 * created index.html files
 * Required Dependencies:
-    - Bootstrap         included using CDN
-    - Web3.js           included using CDN
-   
+    - Bootstrap          ( included using CDN )
+    - Web3.js            ( included using CDN )
+    - truffle-contract   ( used to intract with created contract )
+    -app.js              ( manual js file )
