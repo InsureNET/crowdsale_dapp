@@ -40,3 +40,7 @@ FRONT END
 * modified package.json to add lite-server to scripts
 * added bs-config.json file for lite-server
 * created index.html files
+* Required Dependencies:
+    - Bootstrap         included using CDN
+    - Web3.js           included using CDN
+   
