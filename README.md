@@ -1,5 +1,5 @@
 <div align="center">
-<p><img width="230" height="140" src="assets/logo/logo.png"></p>
+<p><img width="230" height="140" src="src/img/logo/logo.png"></p>
 <h2><b>CROWDSALE DAPP</b></h2>
 <h4>Decntralized application integrated with Ethereum blockchain for ICO Crowdsale</h4>
 

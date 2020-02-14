@@ -38,3 +38,5 @@ FRONT END
 =========
 * installed lite-server package
 * modified package.json to add lite-server to scripts
+* added bs-config.json file for lite-server
+* created index.html files
