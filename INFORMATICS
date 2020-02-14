@@ -42,6 +42,6 @@ FRONT END
 * created index.html files
 * Required Dependencies:
     - Bootstrap          ( included using CDN )
-    - Web3.js            ( included using CDN )
+    - Web3.js            ( used to intract with blockchain node )
     - truffle-contract   ( used to intract with created contract )
     -app.js              ( manual js file )
