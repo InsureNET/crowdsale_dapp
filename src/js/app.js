@@ -18,6 +18,18 @@ App = {
       App.web3Provider = new Web3.providers.HttpProvider('http:localhost:8545');
       web3 = new Web3(App.web3Provider)
     }
+    App.initContracts();
+  },
+
+
+  initContracts: function() {
+    $.getJSON("CrowdSale.json", function(crowdsale) {
+      App.contracts.CrowdSale = TruffleContract(crowdsale);
+      App.contracts.CrowdSale.setProvider(App.web3Provider);
+      App.contracts.CrowdSale.deployed().then(function(instance) {
+        console.log("Contract Address: ", instance.address);
+      });
+    })
   }
 
 }

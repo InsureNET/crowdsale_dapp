@@ -928,10 +928,16 @@
       "links": {},
       "address": "0xBfC5369feC99658C809a1a612FB9ea1DBd115a29",
       "transactionHash": "0x2001535ea0e558ee57531050133df726f18a44d13670840048dd926d80f6c1d8"
+    },
+    "1581671979128": {
+      "events": {},
+      "links": {},
+      "address": "0xbdAA63eE62f4596Cb66D3A3c6768A210b49D3792",
+      "transactionHash": "0xb23fbc33b2fc9eb91432818ea66700d28fc976b0d4ecbb632a3c4e37fa3b25e6"
     }
   },
   "schemaVersion": "3.0.23",
-  "updatedAt": "2020-02-13T16:51:30.716Z",
+  "updatedAt": "2020-02-15T05:36:59.985Z",
   "networkType": "ethereum",
   "devdoc": {
     "methods": {}

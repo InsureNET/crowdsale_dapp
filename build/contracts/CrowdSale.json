@@ -3522,10 +3522,36 @@
       "links": {},
       "address": "0x0a6745ef9A02A889690C52Cb17B80703D9548C25",
       "transactionHash": "0xd9985749af4e16f8a7ebd8d271c05c445585f68ecc15980f0db9ca59ca2d6483"
+    },
+    "1581671979128": {
+      "events": {
+        "0x5e5e995ce3133561afceaa51a9a154d5db228cd7525d34df5185582c18d3df09": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "_buyer",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "_amount",
+              "type": "uint256"
+            }
+          ],
+          "name": "Sell",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0x9e510bE2263a71eE65E9231DB70e2B9793a5B327",
+      "transactionHash": "0x7713619faf7569925ae940fdadbd663ba7d53eac1ff11dda027cc0a90eee8696"
     }
   },
   "schemaVersion": "3.0.23",
-  "updatedAt": "2020-02-13T16:51:30.713Z",
+  "updatedAt": "2020-02-15T05:36:59.981Z",
   "networkType": "ethereum",
   "devdoc": {
     "methods": {}
