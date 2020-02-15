@@ -23,12 +23,23 @@ App = {
 
 
   initContracts: function() {
+    // Getting instance of CrowdSale contract
     $.getJSON("CrowdSale.json", function(crowdsale) {
       App.contracts.CrowdSale = TruffleContract(crowdsale);
       App.contracts.CrowdSale.setProvider(App.web3Provider);
       App.contracts.CrowdSale.deployed().then(function(instance) {
         console.log("Contract Address: ", instance.address);
       });
+    
+    }).done(function() {
+      // Getting instance of Token contract
+      $.getJSON("TrayToken.json", function(tray_token) {
+        App.contracts.TrayToken = TruffleContract(tray_token);
+        App.contracts.TrayToken.setProvider(App.web3Provider);
+        App.contracts.TrayToken.deployed().then(function(instance) {
+          console.log("Token Address: ", instance.address);
+	});
+      })
     })
   }
 
