@@ -1,6 +1,7 @@
 App = {
   web3Provider: null,
   contracts: {},
+  account: '0x0',
 
   init: function() {
     console.log("Initialization Done")
@@ -39,7 +40,20 @@ App = {
         App.contracts.TrayToken.deployed().then(function(instance) {
           console.log("Token Address: ", instance.address);
 	});
-      })
+	return App.render();
+      });
+    })
+  },
+
+  // Render users wallet adderess in html
+  render: function() {
+    web3.eth.getCoinbase(function(err, account) {
+      if(err === null) {
+	console.log(account)
+        App.account = account;
+        // Injecting address value in to html element
+        $('#wallet-address').html("Wallet Address: " + account);
+      }
     })
   }
 
