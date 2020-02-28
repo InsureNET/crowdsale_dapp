@@ -16,7 +16,7 @@ App = {
       web3 = new Web3(web3.currentProvider)
     } else {
       // Create special instance if web3 is not provided
-      App.web3Provider = new Web3.providers.HttpProvider('http:localhost:8545');
+      App.web3Provider = new Web3.providers.HttpProvider('http:localhost:7545');
       web3 = new Web3(App.web3Provider)
     }
     App.initContracts();
@@ -34,10 +34,10 @@ App = {
     
     }).done(function() {
       // Getting instance of Token contract
-      $.getJSON("TrayToken.json", function(tray_token) {
-        App.contracts.TrayToken = TruffleContract(tray_token);
-        App.contracts.TrayToken.setProvider(App.web3Provider);
-        App.contracts.TrayToken.deployed().then(function(instance) {
+      $.getJSON("USFToken.json", function(usf_token) {
+        App.contracts.USFToken = TruffleContract(usf_token);
+        App.contracts.USFToken.setProvider(App.web3Provider);
+        App.contracts.USFToken.deployed().then(function(instance) {
           console.log("Token Address: ", instance.address);
 	});
 	return App.render();

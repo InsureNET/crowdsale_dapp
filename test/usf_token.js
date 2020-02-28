@@ -1,44 +1,44 @@
-const TrayToken = artifacts.require("TrayToken");
+const USFToken = artifacts.require("USFToken");
 
 
-contract("TrayToken", function(accounts) {
+contract("USFToken", function(accounts) {
 
   it("should initialize contract with correct values", async function() {
-    return TrayToken.deployed().then(function(instance) {
+    return USFToken.deployed().then(function(instance) {
       token = instance;
       return token.name();
     }).then(function(token_name) {
-      assert.equal(token_name, 'TrayToken', 'Token name check');
+      assert.equal(token_name, 'USFToken', 'Token name check');
       return token.symbol();
     }).then(function(token_symbol) { 
-      assert.equal(token_symbol, 'TR', 'Token symbol check');
+      assert.equal(token_symbol, 'USF', 'Token symbol check');
     });
   })
 
 
   it("should set total supply upon deployment", async function() {
-    return TrayToken.deployed()
+    return USFToken.deployed()
       .then(function(instance) { 
         token = instance;
         return token.totalSupply()
       }).then(function(total_supply) {
-        assert.equal(total_supply, 1000, 'Sets totalSupply to 1000 tokens');
+        assert.equal(total_supply, 1000000000, 'Sets totalSupply to 1,000,000,000 tokens');
       });
   })
 
 
   it("Should transfer minted tokens to admin account", async function() {
-    return TrayToken.deployed().then(function(instance) {
+    return USFToken.deployed().then(function(instance) {
       token = instance;
       return token.balanceOf(accounts[0]);
     }).then(function(admin_tokens) {
-      assert.equal(admin_tokens, 1000, 'Tokens transfered to admin account');
+      assert.equal(admin_tokens, 1000000, 'Tokens transfered to admin account');
     });
   })
 
 
   it("Should transfer token and there must reduction in token", async function() {
-    return TrayToken.deployed().then(function(instance) {
+    return USFToken.deployed().then(function(instance) {
       token = instance;
       return token.transfer.call(accounts[1], 500, { from: accounts[0] });
     }).then(function(return_value) {
@@ -62,7 +62,7 @@ contract("TrayToken", function(accounts) {
 
 
   it("approval function check", async function() {
-    return TrayToken.deployed().then(function(instance) {
+    return USFToken.deployed().then(function(instance) {
       token = instance;
       return token.approve.call(accounts[1], 200);
     }).then(function(return_value) {
@@ -83,7 +83,7 @@ contract("TrayToken", function(accounts) {
 
 
   it("TransferFrom function check", async function() {
-    return TrayToken.deployed().then(function(instance) {
+    return USFToken.deployed().then(function(instance) {
       token = instance;
       from_A = accounts[2];     // A who approves B to transfer her token
       spender_B = accounts[3];  // B who transfer token from A to anybody

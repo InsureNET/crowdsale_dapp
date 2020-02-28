@@ -1,12 +1,12 @@
 pragma solidity >= 0.5.0 < 0.7.0;
 
-contract TrayToken {
+contract USFToken {
   // Setting State Variables, accessable through out the contract
   // we get getter function for free for public state variable
   uint256 public totalSupply;
-  string public name = 'TrayToken';
-  string public symbol = 'TR';
-  
+  string public name = 'USFToken';
+  string public symbol = 'USF';
+
   // Tracks the acoounts and how much token it holds in key-value pair
   mapping(address => uint256) public balanceOf;
 
@@ -23,7 +23,6 @@ contract TrayToken {
 	  address indexed _spender,
 	  uint256 _value);
 
-
   constructor(uint256 _initialSupply) public {
     // Total number of token
     totalSupply = _initialSupply;
@@ -31,22 +30,20 @@ contract TrayToken {
     balanceOf[msg.sender] = _initialSupply;
   }
 
- 
   function transfer(address _to, uint256 _value) public returns(bool success) {
     // Checking sender have enough tokens
-    require(balanceOf[msg.sender] >= _value);
+    require(balanceOf[msg.sender] >= _value, "");
     // reducing and incrementing balance
     balanceOf[msg.sender] -= _value;
     balanceOf[_to] += _value;
 
     emit Transfer(msg.sender, _to, _value);
-    
+
     return true;
   }
 
-
   function approve(address _spender, uint256 _value) public returns(bool success) {
-    // Account A allowing account B to transfer _value tokens on A's suggestion	  
+  // Account A allowing account B to transfer _value tokens on A's suggestion
     allowance[msg.sender][_spender] = _value;
 
     emit Approval(msg.sender, _spender, _value);
@@ -54,12 +51,11 @@ contract TrayToken {
     return true;
   }
 
-  
-  // This function is called if sender dont initiate the transfer to transfer token to recepient	
+  // This function is called if sender dont initiate the transfer to transfer token to recepient
   function transferFrom(address _from, address _to, uint256 _value) public returns(bool success) {
     // Condition check
-    require(balanceOf[_from] >= _value);
-    require(allowance[_from][msg.sender] >= _value);
+    require(balanceOf[_from] >= _value, "");
+    require(allowance[_from][msg.sender] >= _value, "");
 
     // Incrementing and decrementing value
     balanceOf[_from] -= _value;

@@ -7,10 +7,9 @@
 		"test": "test"
 	},
 	"devDependencies": {
-		"lite-server": "*"
+		"lite-server": "^2.5.4"
 	},
-	"author": "T-rays",
-
+	"author": "T-rays & Jaxcoder",
 	"scripts": {
 		"dev": "lite-server"
 	}
